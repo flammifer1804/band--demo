@@ -1,0 +1,82 @@
+.contact {
+    margin-bottom: 10%;
+    padding: 0 20%;
+  
+    &__icon {
+      display: inline;
+      font-size: 18px;
+      margin-right: 10px;
+  
+      .icon-mail-envelope-closed {
+        font-size: 22px;
+      }
+    }
+  
+    &__title {
+      @include title;
+    }
+  
+    &__msg {
+      @include msg;
+    }
+  
+    &__container {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    &__info {
+      p {
+        padding-top: 10px;
+      }
+    }
+  
+    &__form {
+      width: 50%;
+      display: flex;
+      justify-content: right;
+      flex-wrap: wrap;
+  
+      div {
+        padding: 10px;
+        width: 50%;
+        &:nth-child(3) {
+          width: 100%;
+        }
+      }
+  
+      input {
+        padding: 8px;
+        width: 100%;
+      }
+  
+      button {
+        @include button;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      padding: 0 10px;
+    }
+  
+    @media (max-width: 575px) {
+      &__container {
+        flex-direction: column;
+        margin-left: 10%;
+      }
+  
+      &__info {
+        margin-left: 10%;
+        font-size: 18px;
+      }
+  
+      &__form {
+        margin-top: 10px;
+        width: 90% !important;
+  
+        div {
+          width: 100% !important;
+        }
+      }
+    }
+  }

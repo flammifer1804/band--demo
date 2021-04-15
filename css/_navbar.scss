@@ -1,0 +1,163 @@
+.navbar {
+  min-height: 50px;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__menu-button {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: start;
+  }
+
+  &__search {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    border-radius: 40px;
+
+    &:hover {
+      background-color: rgb(233, 40, 40);
+    }
+
+    &:hover > .navbar__search-bar {
+      width: 150px;
+    }
+  }
+  
+  .gg-search {
+    float: right;
+    color: white;
+    border: 3px solid;
+    margin: 16px 15px;
+  }
+
+  &__search-bar {
+    border: none;
+    outline: none;
+    float: left;
+    height: 30px;
+    margin: 10px;
+    width: 0;
+    background-color: rgb(233, 40, 40);
+    transition: 0.3s;
+  }
+
+  &__item {
+    padding: 15px;
+
+    &--dropdown:hover .navbar__dropdown {
+      display: flex !important;
+    }
+
+    a {
+      color: white;
+    }
+
+    &:hover {
+      background-color: lightgray;
+
+      a {
+        color: black;
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 160px;
+    flex-direction: column;
+    top: 50px;
+    background-color: white;
+    left: 333px;
+
+    a {
+      color: black;
+      padding: 12px 15px;
+      font-size: 14px;
+
+      &:hover {
+        background-color: lightgray;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .icon-menu {
+      display: block;
+    }
+
+    .icon-cross {
+      display: none;
+    }
+
+    &__icon {
+      position: absolute;
+      font-size: 20px;
+      top: 15px;
+    }
+
+    &__search {
+      display: none;
+    }
+
+    &__list {
+      display: none;
+      flex-direction: column;
+      align-items: left;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 100%;
+
+      &:first-child {
+        width: 80%;
+      }
+    }
+
+    &__menu-button {
+      display: flex;
+      color: white;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lightgray;
+      }
+    }
+
+    label {
+      display: flex;
+      padding: 25px 10px;
+      margin-right: 0;
+      position: absolute;
+      width: 40px;
+    }
+  }
+
+  input:checked ~ .navbar__list {
+    display: flex;
+
+    .navbar__dropdown {
+      background-color: black;
+    }
+  }
+
+  input:checked ~ .navbar__menu-button .icon-menu {
+    display: none;
+  }
+
+  input:checked ~ .navbar__menu-button .icon-cross {
+    display: block;
+  }
+}

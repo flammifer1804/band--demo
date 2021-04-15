@@ -1,0 +1,100 @@
+.side {
+    padding: 0 20%;
+    background-color: black !important;
+  
+    &__title {
+      @include title;
+      color: white;
+    }
+  
+    &__msg {
+      @include msg;
+      color: white;
+    }
+  
+    &__month {
+      position: relative;
+      background-color: white;
+      border: 1px solid lightgray;
+      padding: 10px;
+      margin: 0 1.6667%;
+      width: 96.6667%;
+  
+      p {
+        display: inline;
+        color: gray;
+        margin: 0 10px;
+      }
+    }
+  
+    &__month-info {
+      padding: 5px;
+      background-color: rgb(233, 55, 55);
+      color: white;
+      position: relative;
+  
+      &--remain {
+        position: absolute;
+        right: 30px;
+        padding: 5px;
+        background-color: black;
+        color: white;
+        border-radius: 50%;
+      }
+    }
+  
+    &__container {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 15px;
+      margin-top: 10px;
+    }
+  
+    &__product {
+      background-color: white;
+      width: 30%;
+      margin-bottom: 10%;
+  
+      img:hover {
+        opacity: 0.6;
+      }
+  
+      h5 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 10px;
+      }
+  
+      h6 {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 10px;
+        color: gray;
+      }
+  
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 10px;
+      }
+  
+      button {
+        @include button;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      padding: 0 10px;
+    }
+  
+    @media (max-width: 575px) {
+      &__container {
+        flex-direction: column;
+        align-items: center;
+      }
+      &__product {
+        width: 96.6667% !important;
+        margin-bottom: 3.3333%;
+      }
+    }
+  }

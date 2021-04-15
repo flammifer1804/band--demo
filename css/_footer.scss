@@ -1,0 +1,41 @@
+.footer {
+    img {
+      opacity: 0.75;
+    }
+
+    p {
+      padding-top: 5%;
+      margin-bottom: 10%;
+      text-align: center;
+  
+      a {
+        text-decoration: underline;
+        color: black;
+        cursor: pointer;
+      }
+    }
+  
+    &__icon {
+      padding-top: 10%;
+      text-align: center;
+      font-size: 20px;
+    }
+  
+    &__link {
+      i {
+        padding-left: 1px;
+        opacity: 0.6;
+        color: black;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+  
+      &:hover {
+        opacity: 0.4;
+        cursor: pointer;
+      }
+    }
+  }
+  

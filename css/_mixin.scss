@@ -1,0 +1,38 @@
+
+@mixin title {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 6px;
+  font-size: 30px;
+  padding: 15px;
+  margin-top: 10%;
+}
+
+@mixin msg {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 15px;
+  font-style: italic;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+@mixin button {
+  width: 110px;
+  margin: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 14px;
+
+  &:hover {
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+  }
+}
